@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #box{
+            height: 200px;
+            width: 400px;
+            border: 1px solid white;
+            background-color: var(--bgColor);
+            animation: animateBgColor 10s
+        }
+        
+
+        @property --bgColor{
+            syntax: "<color>";
+            initial-value: green;
+            inherits: false;
+        }
+        @keyframes animateBgColor{
+            from {
+                --bgColor:red;
+            }
+            to{
+                --bgColor:blue;
+            }
+        }
+    </style>
+</head>
+<body>
+   
+<div class="box">
+    <img src="/an-8-bit-retro-styled-pixel-art-illustration-of-a-goblin-free-png.webp" alt="">
+    <h2>the cuit</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+</div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
