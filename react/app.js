@@ -26,15 +26,38 @@
 // export default english;
 
 
-export var obj = {
-    user:"rohit",
-    age:24,
-    city:"mumbai",
-    isFrom:false
-};
-const hamza ={
-    name:"hamza",
-    age:26,
-    inForm:true
-};
-export default hamza;
+// export var obj = {
+//     user:"rohit",
+//     age:24,
+//     city:"mumbai",
+//     isFrom:false
+// };
+// const hamza ={
+//     name:"hamza",
+//     age:26,
+//     inForm:true
+// };
+// export default hamza;
+
+
+// export const  user = "sumit";
+
+// const age = 24;
+// export default age;
+
+// function app() {
+//     console.log('nachooo');
+    
+//     return "Sumit";
+// }
+// export default app;
+
+
+// export function test() {
+//     return "I'm test";
+// }
+const h1 = () => {
+    return React.createElement("div",{id:'box'}, "Hello World this is a box");
+}
+
+export default h1;
