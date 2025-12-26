@@ -29,6 +29,7 @@ const hero = () => {
     var p = React.createElement('p', {id:'hero-para'}, "- It's D.Nova a Design wizard");
 
     var parentCenter = React.createElement('div', {id:'parent-center'}, h1, p);
+    
 
     var h4 = React.createElement('h4', {id:'scroll-down'}, 'Scroll Down !');
 

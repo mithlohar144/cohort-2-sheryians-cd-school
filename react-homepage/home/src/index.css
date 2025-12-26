@@ -1,0 +1,439 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+html,
+body{
+  height: 100%;
+  width: 100%;
+}
+.nav{
+  display: flex;
+}
+.logo_name h1{
+  
+  font-size: 30px;
+  padding: 35px;
+}
+
+.nav_btn{
+  
+  display: flex;
+  gap: 30px;
+  margin-left: auto;
+  align-items: center;
+  
+}
+.book_btn{
+  font-family: "helvetica neue";
+  text-align: right;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 35px;
+  padding: 10px 20px;
+}
+.nav_btn p{
+  text-decoration: none;
+  color: rgb(85, 84, 84);
+  font-size: 16px;
+  margin-left: 10px;
+  text-align: center;
+  transition: all ease 0.5s;
+
+}
+.nav_btn p:hover{
+  border: 1px solid transparent;
+  padding: 10px;
+  border-radius: 15px;
+  border-color: #0d1a2d;
+
+}
+.book_btn button{
+  background-color: rgb(37, 37, 36);
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 45vh;
+  animation: ease-in-out;
+}
+.parent_img{
+  height: 60%;
+  width: 95%;
+  margin-top: 15vh;
+  border-radius: 15px;
+  margin-left: 5vh;
+  
+}
+.parent_div{
+  background-image: url('https://react-project-02-two.vercel.app/assets/heroImage-BEuOm4pa.avif');
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  width: 90%;  
+  margin-left: 10vh;
+  border-radius: 15px;
+}
+.parent_text{
+  text-align: center;
+  top: 30%;
+  left: 15%;
+  color: white;
+}
+.parent_text h1{
+  font-size: 45px;
+  margin-bottom: 20px;
+  padding-top: 15vh;
+  margin-left: 30vh;
+  margin-right: 30vh;
+}
+.parent_text p{
+  font-size: 20px;
+  margin-bottom: 30px;
+  margin-left: 30vh;
+  margin-right: 30vh;
+}
+.parent_text button{
+  background-color: rgb(37, 37, 36);
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.end_img img{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  position: relative;
+}
+.end_img{
+  margin-left: 10px;
+  /* border: 1px solid black; */
+  background-color:#494a4aa6;
+  border-radius: 40px;
+  padding: 10px;
+  /* position: absolute; */
+}
+.social-text{
+  margin-left: 60vh;
+}
+.social-text button{
+  background-color: transparent;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 20px;
+
+}
+.end_text p{
+  color: rgba(255, 255, 255, 0.731);
+  font-size: 20px;
+  padding: 10px;
+}
+.hero_end_text{ 
+  display: flex;
+  align-items: center;
+  margin-top: 35vh; 
+}
+
+/* About section */
+
+.About_parent{
+  display: flex;
+  justify-content: center;
+  gap: 30%;
+  padding: 40px;
+  padding-top: 50px;
+}
+.About_text h1{
+  font-size: 25px;
+  font-weight: 200;
+  padding: 10px;
+  transition: all ease 0.5s;
+}
+.About_text h1:hover{
+  background-color: transparent;
+  border: 1px solid rgba(34, 48, 61, 0.835);
+  border-radius: 20px;
+}
+.About_para p{
+  font-weight: 800;
+  font-size: 20px;
+}
+.Parent_div{
+  background-color: rgb(19, 19, 50);
+  height: 400px;
+  width: 400px;
+  border-radius: 20px;
+}
+.top_icon{
+  color: white;
+  font-size: 50px;
+  padding: 30px;
+}
+.top_mid p{
+  color: white;
+  
+}
+.para_feature{
+  color: white;
+  font-size: 30px;
+  font-weight: 200;
+  padding: 10px;
+  margin-left: 20px;
+
+}
+.para_feature span{
+  color: #696b6f;
+}
+.feature_end button{
+  color: rgb(4, 188, 250);
+  background-color: transparent;
+  font-size: 50px;
+  border: transparent;
+  padding: 20px;
+  margin-top: 20px;
+}
+.feature_mid{
+  height: 400px;
+  width: 400px;
+  border-radius: 20px;
+  background-image: url("https://react-project-02-two.vercel.app/assets/aboutMen-x782aIo5.avif");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mid_text button{
+  font-size: 25px;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: #286fdaaf;
+  color: rgb(218, 218, 218);
+  font-weight: 300;
+}
+
+.Card_3{
+  height: 400px;
+  width: 400px;
+  background-color: rgb(235, 243, 250);
+  border-radius: 20px;
+  padding: 20px;
+}
+.line{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+}
+.line h5{
+      font-size: 1.4rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    color: #0d1a2d;
+    align-items: end;
+}
+.dote{
+  display: flex;
+}
+
+.feature_parent{
+    display: flex;
+    gap: 40px;
+    padding: 60px;
+}
+.parent h1{
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    color: #0d1a2d;
+    font-weight: 400;
+    text-align: center;
+}
+.top h1{
+  padding: 20px 0 0 20px;
+  text-align: left;
+  font-size: 50px;
+  font-weight: 300;
+}
+.top h4{
+  padding-left: 20px;
+  font-size: 30px;
+  font-weight: 400;
+}
+.top p{
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 300;
+}
+.dote_circle{
+  color: rgb(102, 175, 203);
+}
+.line_number{
+  margin-left: 20px;
+}
+.Rating{
+      display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+    padding: 2.5rem .5rem;
+    border-bottom: 2px solid #f6f8fc;
+
+}
+.up{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.buttom{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.rate h1{
+  font-weight: 500;
+}
+.rate p{
+  font-weight: 300;
+  font-size: 20px;
+}
+.card{
+  height: 400px;
+  width: 400px;
+  padding: 20px;
+}
+.about_btn{
+  background-color: transparent;
+  border: transparent;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 10px;
+  transition: all ease 0.5s;
+}
+.about_btn:hover{
+  border: 1px solid rgb(93, 91, 91);
+  border-radius: 20px;
+}
+.first_card p{
+  font-size: 23px;
+  margin-top: 50px;
+}
+.explore_btn{
+  padding: 10px;
+  border-radius: 20px;
+  border: transparent;
+  background-color: #0d1a2d;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 50px;
+}
+#arrow{
+  rotate: 220deg;
+}
+.second_card{
+  background-image: url('https://react-project-02-two.vercel.app/assets/femaleTennisPlayer-Dx66YZes.avif');
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+}
+.second_card_btn{
+  padding: 15px;
+  border-radius: 20px;
+  border: none;
+  background-color: #ffffff3e;
+  font-size: 20px;
+  font-weight: 300;
+}
+.second_card_buttom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 70%;
+  color: white;
+}
+.second_card_buttom p{
+  font-size: 25px;
+  font-weight: 300;
+}
+.second_arrow_card{
+  background-color: #171717;
+  color: white;
+  font-size: 35px;
+  border-radius: 50%;
+  border: none;
+  padding: 10px;
+}
+.thrid_top{
+  background-image: url('https://react-project-02-two.vercel.app/assets/tennisBall-jdCHHSni.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;  
+  
+  
+}
+.thrid_top p{
+  color: white;
+  font-weight: 400;
+  font-size: 20px;
+  margin-top: 60px;
+  padding: 10px;
+  padding-left: 20px;
+}
+.thrid_top button{
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: #ffffff3e;
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.third_buttom{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.third_buttom p{
+  margin-bottom: 20px;
+  font-weight: 300;
+  font-size: 25px;
+}
+.buttom_arrow{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+#left_arrow{
+  rotate: 90deg;
+  font-size: 25px;
+  cursor: pointer;
+}
+#right_arrow{
+  rotate: 270deg;
+  font-size: 25px;
+  cursor: pointer;
+}
+.footer_parent{
+  display: flex;
+  gap: 50px;
+  padding: 30px;
+}
