@@ -1,0 +1,10 @@
+form{
+    margin-top: 20px;
+    background-color: aquamarine;
+    display: flex;
+    gap: 10px;
+}
+input, button{
+    padding: 10px 20px;
+   
+}
