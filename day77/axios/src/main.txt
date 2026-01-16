@@ -1,0 +1,7 @@
+API handing (Axios)
+                is a tool 
+
+CSR -> client side rendering 
+
+
+SSR -> server side rendering
