@@ -1,0 +1,9 @@
+react router Dom 
+
+
+- installl react-router-Dom
+- in main.jsx  import <BrowerRouter> from 'react-router-dom';
+- wrap <App/> ny brower Router in Main.jsx File
+- make router (collection of all route) and inside Routes make Route
+
+mention path (where to go) and elmet (what to reder) attributes
