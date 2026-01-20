@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 
 const Product = () => {
   return (
@@ -9,6 +9,7 @@ const Product = () => {
       <div className='flex gap-5'>
       <Link to="/product/men" className="text-xl font-semibold underline">Men</Link>
       <Link to="/product/women" className="text-xl font-semibold underline">Women</Link></div>
+      <Outlet />
       </div>
   )
 }

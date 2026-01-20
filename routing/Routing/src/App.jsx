@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, Router } from "react-router-dom";
+import { Routes, Route, Router, createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Product from "./pages/Product";
@@ -9,11 +9,38 @@ import Men from "./pages/Men";
 import RandomAbout from "./pages/RandomAbout";
 import Details from "./pages/Details";
 import NotFound from "./pages/NotFound";
+import Footer from "./pages/Footer";
 const App = () => {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/about",
+      element: <About />,
+    },
+    {
+      path: "/product",
+      element: <Product />,
+      children: [
+        {
+          path: "/product/men",
+          element: <Men />,
+        },
+        {
+          path: "/product/women",
+          element: <Women />,
+        },
+      ],
+    },
+  ]);
   return (
     <div>
       <Navbar />
-     <Routes>
+
+      <RouterProvider router={allRoutes} />
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/product" element={<Product />} />
@@ -22,11 +49,13 @@ const App = () => {
         {/* Dynamic Route  */}
         <Route path="/about/:id" element={<RandomAbout />} />
 
-         {/* NAsted Dynamic Route */}
-          <Route path="/product/men/details" element={<Details />} />
+        {/* NAsted Dynamic Route */}
+        <Route path="/product/men/details" element={<Details />} />
         {/* Not Found Route */}
         <Route path="/*" element={<NotFound />} />
-     </Routes>
+      </Routes>
+
+      <Footer />
     </div>
   );
 };
