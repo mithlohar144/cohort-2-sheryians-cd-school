@@ -22,11 +22,14 @@ const App = () => {
   return (
     <div>
       {/* <button onClick={getData}>Click </button> */}
-      <h1>Theme is {Theme}</h1>
-      <Navbar  ChangeTheme={ChangeTheme} />
-
+      {/* <h1>Theme is {Theme}</h1> */}
+      {/* <Navbar  ChangeTheme={ChangeTheme} /> */}
+<Navbar brand={'Sumit'} >heloo </Navbar>
+  
       <Courses />
-      <Allsection />
+      <Allsection ><h1>Mr. Bean</h1>
+        <h1>batman</h1>
+      </Allsection>
       <Footer />
     </div>
   );

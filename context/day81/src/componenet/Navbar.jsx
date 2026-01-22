@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
+import { UserDataContext } from "../context/UserContext";
 const Navbar = (props) => {
-  const [newTheme, setnewTheme] = useState("");
-  console.log(props);
+  // const [newTheme, setnewTheme] = useState("");
+  // console.log(props);
+
+ const data =  useContext(UserDataContext)
+ console.log(data);
+ 
 
   return (
     <div>
@@ -13,8 +18,9 @@ const Navbar = (props) => {
       >
         Change Theme
       </button> */}
-
-      <form
+      <h1>This is Navbar {data}</h1>
+<h1>{props.children}</h1>
+      {/* <form
         onSubmit={(e) => {
           e.preventDefault();
           props.ChangeTheme(newTheme);
@@ -30,7 +36,7 @@ const Navbar = (props) => {
           placeholder="enter value"
         />
         <button>Submit</button>
-      </form>
+      </form> */}
     </div>
   );
 };
