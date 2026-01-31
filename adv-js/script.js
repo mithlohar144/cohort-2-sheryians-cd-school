@@ -109,7 +109,7 @@
 // }
 // let B1 = new bottel();
 // let B2 = new bottel();
-// console.log(BT);
+// console.log(B1);
 
 // class Sketch{
 //     constructor(characters, color, somefun){
@@ -136,10 +136,42 @@
 // global -> window
 // function -> window
 // es5 function inside object -> object
+    // let obj = {
+    //     name:"sumit",
+    //     fnc: function(){
+    //         console.log(this.name);
+    //     }
+    // } 
 // es6 function inside es5 function -> window
+// let obj = {
+//     name:"sumit",
+//     fnc: function(){
+//         console.log(this.name);
+//     }
+// }
 // es5 function inside es5 function inside object -> window
+
+// let obj = {
+//     name:"sumit",
+//     fnc: function(){
+//         function abcd(){
+//             console.log(this.name);
+//         }
+//         abcd();
+        
+//     },
+// };
 // es6 function inside es5 function inside object -> object
 
+// let obj = {
+//     name:"sumit",
+//     fnc: function(){
+//         function abcd(){
+//             console.log(this.name);
+//         }
+//         abcd();
+//     },
+// };
 
 
 // let obj = {
@@ -160,8 +192,8 @@
 
 
 // call -> fnc chalata hai and thiski value set krta hai
-// apply -> wahi krta hai jo call krta hai sf arguments men phli value this ki  and dusri value hoti hai
-// bind -> 
+// apply -> wahi krta hai jo call krta hai sf arguments men phli value this ki and dusri value array ki hoti hai
+// bind -> whi krta hai jo call krta hai and apko new function deta hai 
 // let obj1 = {
 //     name: "sumit",
 // };
@@ -359,3 +391,9 @@
 // abcd.apply(obj, [1, 2, 3, 4])
 
 
+class Bottle{
+    constructor(){
+        this.color = "blue",
+        this.brand
+    }
+}

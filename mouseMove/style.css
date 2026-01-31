@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: black;
+}
+
+.mouse-follower {
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  border-radius: 50%;
+}/*# sourceMappingURL=style.css.map */
