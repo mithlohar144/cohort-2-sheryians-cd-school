@@ -1,8 +1,12 @@
 const express = require("express");
 const noteModel = require("./models/note.model");
-const app = express();
+const cors = require('cors')
+const path = require('path')
 
+const app = express();
+app.use(cors())
 app.use(express.json());
+app.use(express.static(". /public"))
 // POST
 // create new note and save data in DB
 
@@ -45,13 +49,18 @@ app.delete('/api/notes/:id', async(req,res)=>{
 
 app.patch('/api/notes/:id', async(req, res)=>{
     const id = req.params.id
-    const {descripation}= req.body
-    const note = await noteModel.findByIdAndUpdate(id, {descripation})
+    const { title ,descripation}= req.body
+    const note = await noteModel.findByIdAndUpdate(id, {title , descripation})
 
     res.status(200).json({
         message:"Update Success",
         note
     })
 
+})
+
+app.use('*name',(req, res)=>{
+    // res.send("this is Wild Card")
+    res.sendFile(path.join(__dirname,"..", "/public/index.html"))
 })
 module.exports = app;
