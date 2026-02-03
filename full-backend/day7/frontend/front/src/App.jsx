@@ -6,7 +6,7 @@ const App = () => {
   ])
 
   function fetchNotes() {
-    axios.get('http://localhost:3000/api/notes')
+    axios.get('https://notesapp-k7n0.onrender.com/api/notes')
       .then((res) => {
         console.log(res.data.note);
         setNotes(res.data.note)
@@ -23,7 +23,7 @@ const App = () => {
     const { title, descripation } = e.target.elements
 
     console.log(title.value, descripation.value);
-    axios.post("http://localhost:3000/api/notes", {
+    axios.post("https://notesapp-k7n0.onrender.com/api/notes", {
       title: title.value,
       descripation: descripation.value
     })
@@ -36,7 +36,7 @@ const App = () => {
   }
 
   function handleDelete(noteId) {
-    axios.delete("http://localhost:3000/api/notes/" + noteId)
+    axios.delete("https://notesapp-k7n0.onrender.com/api/notes/" + noteId)
       .then(res => {
         console.log(res.data);
         fetchNotes()
@@ -50,7 +50,7 @@ const App = () => {
 
     const { Modifytitle, Modifydescripation } = e.target.elements
     console.log(Modifytitle.value, Modifydescripation.value);
-    axios.patch("http://localhost:3000/api/notes/" + noteId, {
+    axios.patch("https://notesapp-k7n0.onrender.com/api/notes/" + noteId, {
       title: Modifytitle.value,
       descripation: Modifydescripation.value
     })
