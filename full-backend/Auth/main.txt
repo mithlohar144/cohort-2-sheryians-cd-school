@@ -1,0 +1,8 @@
+Authentication -> identifie krna ki request kis user ke pass se aayi hai
+
+Authorization -> (Role baased access) user kya ky kr skta hai
+
+Validation ->  data ka formet check krna
+
+
+varification -> data shi hai ya nhi ye check krnaa 
