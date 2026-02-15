@@ -14,6 +14,22 @@ const upload = multer({storage: multer.memoryStorage()});
 /** /api/posts */
 
 PostRoutes.post("/",upload.single("image"), postController.CreatePostController);
+
+/**
+ * GET /api/posts/ [protected]
+ */
+PostRoutes.get("/", postController.getPostsController);
+
+
+/**
+ * GET /api/posts/details/:postid
+ * 
+ * - return an detailed about specific post with the id, also check whether the post belongs to the user 
+ * that is reqesting come from 
+ */
+
+
+PostRoutes.get("/details/:postId",postController.getPostDetailsController );
 module.exports = PostRoutes;
 
 
