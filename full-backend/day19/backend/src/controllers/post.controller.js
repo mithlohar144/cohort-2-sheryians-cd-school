@@ -59,28 +59,58 @@ async function getPostDetailsController(req, res) {
 }
 
 async function likePostController(req, res) {
-  const username = req.user.username;
-  const postId = req.params.postId;
 
-  const post = await postModel.findById(postId);
-  if (!post) {
-    return res.status(404).json({
-      message: "Post Not Found",
-    });
-  }
-  const like = await likeModel.create({
-    user: username,
-    post: postId,
-  });
-  res.status(200).json({
-    message: "Post Liked Successfully",
-    like,
-  });
+    const username = req.user.username
+    const postId = req.params.postId
+
+    const post = await postModel.findById(postId)
+
+    if (!post) {
+        return res.status(404).json({
+            message: "Post not found."
+        })
+    }
+
+    const like = await likeModel.create({
+        post: postId,
+        user: username
+    })
+
+    res.status(200).json({
+        message: "Post liked successfully.",
+        like
+    })
+
 }
+
+
+
+async function unLikePostController(req, res) {
+    const postId = req.params.postId
+    const username = req.user.username
+
+    const isLiked = await likeModel.findOne({
+        post: postId,
+        user: username
+    })
+
+    if (!isLiked) {
+        return res.status(400).json({
+            message: "Post didn't like"
+        })
+    }
+
+    await likeModel.findOneAndDelete({ _id: isLiked._id })
+
+    return res.status(200).json({
+        message: "post un liked successfully."
+    })
+}
+
 
 async function getFeedController(req, res) {
   const user = req.user;
-  const posts = await Promise.all((await postModel.find().populate("user").lean())
+  const posts = await Promise.all((await postModel.find().populate("user").sort({ _id: -1 }).lean())
     .map(async (post) => {
       const isLiked = await likeModel.findOne({
         user: user.username,
@@ -102,4 +132,5 @@ module.exports = {
   getPostDetailsController,
   likePostController,
   getFeedController,
+  unLikePostController
 };

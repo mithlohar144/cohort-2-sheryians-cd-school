@@ -6,7 +6,7 @@ export const PostContext = createContext();
 export const PostContextProvider = ({ children }) => {
   const [loading, setloading] = useState(false)
   const [Post, setPost] = useState(null)
-  const [Feed, setFeed] = useState()
+  const [Feed, setFeed] = useState("")
 
 
   return (

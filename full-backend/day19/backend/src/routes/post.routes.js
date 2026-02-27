@@ -38,6 +38,7 @@ PostRoutes.get("/details/:postId",identifyUser, postController.getPostDetailsCon
  */
 
 PostRoutes.post("/like/:postId", identifyUser, postController.likePostController);
+PostRoutes.post("/unlike/:postId", identifyUser, postController.unLikePostController);
 
 /**
  * @route GET /api/posts/feed
