@@ -1,0 +1,40 @@
+@mixin flex-colom($gap: 0rem) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.form-container {
+  height: fit-content;
+  min-width: 400px;
+  @include flex-colom(1.5rem);
+
+  form {
+    @include flex-colom(1.5rem);
+    input,
+    button {
+      border: none;
+      outline: none;
+      padding-inline: 1.5rem;
+      padding-block: 1rem;
+      border-radius: 1rem;
+    }
+    button {
+      background-color: #bd0c23;
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+  .toggleAuthForm {
+    color: #bd0c23;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
