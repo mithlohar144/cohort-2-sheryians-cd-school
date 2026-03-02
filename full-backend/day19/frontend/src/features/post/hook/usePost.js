@@ -36,7 +36,7 @@ export const usePost = () => {
         const data = await unlikePost(post)
         await handleGetFeed()
 
-    }
+    }  
 
   useEffect(() => {
     handleGetFeed();
