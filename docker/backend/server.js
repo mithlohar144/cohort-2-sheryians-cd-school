@@ -1,21 +1,6 @@
-import express from 'express';
+import app from "./src/app.js";
 
-const app = express();
-const PORT = 3000;
 
-app.get('/', (req, res) => {
-  res.status(200).json({ message: 'Hello from the backend!' });
-});
-
-app.get('/api/data', (req, res) => {
-  const data = {
-    id: 1,
-    name: 'Sample Data',
-    description: 'This is some sample data from the backend.',
-  };
-  res.status(200).json(data);
-});
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
-
+app.listen(3000, () => {
+  console.log("Server is running on port 3000");
+}); 

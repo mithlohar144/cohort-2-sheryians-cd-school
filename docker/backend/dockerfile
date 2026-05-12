@@ -1,11 +1,20 @@
-FROM node:20-alpine
+FROM node:20-alpine    
+           # apline -> linux server
+           # node:20 -> node version 20
 
-COPY ./package.json .
-COPY ./package-lock.json .
+WORKDIR /app
+
+COPY ./package.json /app  
+COPY ./package-lock.json /app
 
 RUN npm install
 
-COPY ./server.js .
+
+# copy all files to the container
+COPY . /app
+
+
+# COPY ./server.js .
 
 CMD ["node", "server.js"]
 
@@ -16,3 +25,8 @@ CMD ["node", "server.js"]
 # for made cantainer
 
 # docker run  img_name
+
+
+# port mapping
+#  docker run -p 3000:3000 express 
+
